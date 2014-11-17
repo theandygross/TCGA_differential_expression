@@ -101,3 +101,31 @@ def infer_normal_knn(df, r_curtoff=.4, k=5):
     tn_c.columns = tn_c.columns.swaplevel(0, 1)
     tn_c = tn_c.sortlevel(axis=1, level=0)
     return tn_c
+
+
+def dx_group(split, matched_tn, fc=1.5):
+    """
+    Run a differential expression analysis on a cohort, splitting on a
+    binary variable.  I.E. Do patients with TP53 mutations have differing
+    patterns of differential expression that wild-types.
+    """
+    tab_1 = binomial_test_screen(matched_tn.ix[:, true_index(split == True)],
+                                 fc=fc)
+    tab_1 = tab_1.ix[(((tab_1.frac - .5).abs() > .25) & (tab_1.p > .01)) ==
+                     False]
+
+    tab_0 = binomial_test_screen(matched_tn.ix[:, true_index(split==False)],
+                                 fc=fc)
+    tab_0 = tab_0.ix[(((tab_0.frac - .5).abs() > .25) & (tab_0.p > .01)) ==
+                     False]
+
+    df = matched_tn.ix[:, true_index(split == True)]
+    ttest_1 = df.apply(ttest_rel, axis=1)
+
+    df = matched_tn.ix[:, true_index(split == False)]
+    ttest_0 = df.apply(ttest_rel, axis=1)
+
+    t0 = pd.concat([tab_0, ttest_0], keys=['binom', 'ttest'], axis=1)
+    t1 = pd.concat([tab_1, ttest_1], keys=['binom', 'ttest'], axis=1)
+    t = pd.concat([t0, t1], keys=['miss', 'hit'], axis=1)
+    return t
