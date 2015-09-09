@@ -1,7 +1,17 @@
 
 # README
 
-This repository contains all of the analysis notebook required for the reproduction of the manuscript __Analysis of matched tumor and normal profiles reveals proliferation-independent signals underlying cancer__.  
+This repository contains all of the analysis notebook required for the reproduction of the manuscript:
+
+__Analysis of matched tumor and normal profiles reveals common transcriptional and epigenetic signals shared across cancer types__.  
+
+[Andrew M. Gross](http://andy-gross.flavors.me/), [Jason F. Kreisberg](http://sdcsb.ucsd.edu/about/contact-info-2/), [Trey Ideker](http://healthsciences.ucsd.edu/som/medicine/research/labs/ideker/Pages/default.aspx)
+
+## Analysis 
+
+All analysis for the manuscript is recorded in a series of Jupyter (formerly IPython) Notebooks. 
+
+To view please follow the [Github](https://github.com/theandygross/TCGA_differential_expression/tree/master/Notebooks) or [NBviewer](http://nbviewer.ipython.org/github/theandygross/TCGA_differential_expression/blob/master/Notebooks/Index.ipynb) links.
 
 ## Dependencies  
 
