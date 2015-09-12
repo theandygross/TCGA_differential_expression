@@ -18,7 +18,8 @@ To initialize the data run the Notebooks in the following order:
 
 ### Imports and Globals  
 * [Global_Parameters](Global_Parameters.ipynb) this is used to store all of the hard paths being used throughout the analysis. You should manually edit this file to point to where your data is stored locally.
-* [Imports](./Imports.ipynb) import some commonly used data and functions into the Python enviroment. This is used to avoid muddying up analysis files with boilerplate import and functions. I generally load everything in the notebook globally by importing it (this requires first loading the [NotebookImport package](https://github.com/theandygross/NotebookImport)). 
+* [Imports](./Imports.ipynb) import some commonly used data and functions into the Python enviroment. This is used to avoid muddying up analysis files with boilerplate import and functions. I generally load everything in the notebook globally by importing it (this requires first loading the [NotebookImport package](https://github.com/theandygross/NotebookImport)).  
+* [GTEX](./GTEX.ipynb) Downloads and handles tissue-specific expression data from the GTEX project. 
 
 ### Initial fraction upregulated screen 
 
@@ -40,4 +41,10 @@ For the microarray data, I manually downloaded the series matrix files from GEO.
 
 ### Targeted Followup 
 This is where I dig into specific results. There are a bunch of other attempts at this that did not make the cut in the Exploratory folder. 
-* [GABA_Receptors](./GABA_Receptors.ipynb) exploration of GABA receptor subunits.
+* [GABA_Receptors](./GABA_Receptors.ipynb) exploration of GABA receptor subunits. 
+* [GABA_Receptors_GTEX](./GABA_Receptors_GTEX.ipynb) looks at tissue specific expression of GABA subunits in healthy tissue using the GTEX dataset.
+
+
+```python
+
+```
