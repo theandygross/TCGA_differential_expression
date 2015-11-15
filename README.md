@@ -3,7 +3,7 @@
 
 This repository contains all of the analysis notebook required for the reproduction of the manuscript:
 
-__Analysis of matched tumor and normal profiles reveals common transcriptional and epigenetic signals shared across cancer types__.  
+[__Analysis of matched tumor and normal profiles reveals common transcriptional and epigenetic signals shared across cancer types__.  ](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0142618)
 
 [Andrew M. Gross](http://andy-gross.flavors.me/), [Jason F. Kreisberg](http://sdcsb.ucsd.edu/about/contact-info-2/), [Trey Ideker](http://healthsciences.ucsd.edu/som/medicine/research/labs/ideker/Pages/default.aspx)
 
